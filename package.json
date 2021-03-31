@@ -4,7 +4,7 @@
   "description": "So you want to buy a ship...",
   "main": "server/server.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "node server/server.js",
     "build": "webpack --watch"
   },
   "repository": {
