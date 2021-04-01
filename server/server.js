@@ -6,7 +6,7 @@ const db = require("../database");
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {res.send('hi') });
 
 app.get("/ships", (req, res) => {
   let queryStr =
