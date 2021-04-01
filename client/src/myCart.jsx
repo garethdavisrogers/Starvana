@@ -13,6 +13,7 @@ class Cart extends React.Component {
         {this.inCart.map((item) => (
           <CartItem item={item} />
         ))}
+        <button>Checkout</button>
       </div>
     );
   }

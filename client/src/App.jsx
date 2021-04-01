@@ -40,7 +40,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { inCart } = this.state;
+    const { inCart, checkout } = this.state;
     return (
       <div>
         <div id="page-header">
