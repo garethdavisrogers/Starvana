@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 const db = require("../database");
 
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {res.send('hi') });
+app.get("/", (req, res) => {
+  res.send("hi");
+});
 
 app.get("/ships", (req, res) => {
   let queryStr =
