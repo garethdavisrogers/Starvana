@@ -13,7 +13,11 @@ class ShipCarousel extends React.Component {
     return (
       <div>
         {this.props.ships.map((ship, index) => (
-          <ShipCarouselItem key={index} ship={ship} />
+          <ShipCarouselItem
+            key={index}
+            ship={ship}
+            OnHandleAddToCart={this.props.OnHandleAddToCart}
+          />
         ))}
       </div>
     );

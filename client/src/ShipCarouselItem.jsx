@@ -10,21 +10,28 @@ class ShipCarouselItem extends React.Component {
   }
 
   render() {
-    const shipName = this.props.ship.model;
-    const shipsObj = {
-      1: bebopImg,
-      2: milleniumFalconImg,
-      3: serenityImg,
-      4: outlawStarImg,
+    const { OnHandleAddToCart, ship } = this.props;
+    const shipName = ship.model;
+    let shipsObj = {
+      4: bebopImg,
+      14: milleniumFalconImg,
+      24: outlawStarImg,
+      34: serenityImg,
     };
-    const index = this.props.ship.id;
+    const index = ship.id;
     return (
       <div>
-        <div>{this.props.ship.model}</div>
+        <div>{ship.model}</div>
         <img src={shipsObj[index] || null} />
-        <div>${this.props.ship.price}.00</div>
-        <div>{this.props.ship.description}</div>
-        <button>Buy Now</button>
+        <div>${ship.price}.00</div>
+        <div>{ship.description}</div>
+        <button
+          onClick={() => {
+            OnHandleAddToCart(shipName);
+          }}
+        >
+          Buy Now
+        </button>
       </div>
     );
   }

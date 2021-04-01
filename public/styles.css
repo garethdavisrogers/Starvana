@@ -1,0 +1,10 @@
+body {
+  background-color: lightsteelblue;
+  font-family: arial sans-serif;
+  font-size: 20pt;
+}
+#page-header {
+  font-size: 30pt;
+  font-family: Stencil Std, fantasy;
+  background-color: blue;
+}
